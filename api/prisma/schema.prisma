@@ -1,3 +1,4 @@
+
 // This is your Prisma schema file,
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
@@ -12,10 +13,24 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
-
 model User {
-  id           Int      @id @default(autoincrement())
-  email        String   @unique
-  auth0Id      String   @unique @default("")
-  name         String?
+  id              Int        @id @default(autoincrement())
+  email           String     @unique
+  auth0Id         String     @unique @default("")
+  name            String?
+  starredJournals Journal[]  @relation("StarredJournals")
+  createdJournals Journal[]  @relation("CreatedJournals")
 }
+
+model Journal{
+  id          Int       @id @default(autoincrement())
+  title       String
+  journalText String
+  star        Int
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  creatorId   Int       // This holds the foreign key
+  creator     User      @relation("CreatedJournals", fields: [creatorId],references:[id])
+  starredBy   User[]    @relation("StarredJournals")
+}
+

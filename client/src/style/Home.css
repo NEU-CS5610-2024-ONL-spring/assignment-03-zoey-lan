@@ -1,0 +1,74 @@
+.home-page .block {
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.block-login-welcome p,
+.block-top-starred h2,
+.block-recent-user-journals h2 {
+  margin: 0 0 10px 0;
+}
+
+.block-top-starred ul,
+.block-recent-user-journals ul {
+  list-style: none;
+  padding: 0;
+  color: #0056b3;
+}
+.title h1 {
+  margin: 0;
+  padding: 20px;
+  background-color: #007bff;
+  color: white;
+  text-align: center;
+}
+.block-top-starred li,
+.block-recent-user-journals li {
+  margin-bottom: 5px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .home-page .block {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .title h1,
+  .block-login-welcome p,
+  .block-top-starred h2,
+  .block-recent-user-journals h2 {
+    font-size: 16px;
+  }
+
+  button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}

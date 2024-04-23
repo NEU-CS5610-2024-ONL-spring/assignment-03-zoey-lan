@@ -1,0 +1,110 @@
+/* General page layout and typography */
+.detail-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.detail-title {
+  margin-top: 0;
+  color: #333;
+}
+
+.detail-meta {
+  margin: 10px 0;
+  color: #666;
+  font-style: italic;
+}
+
+.detail-text {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* Buttons, consistent with Journals CSS */
+.detail-button {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none; /* In case you use <a> or <Link> */
+}
+
+.detail-button:hover {
+  background-color: #218838;
+}
+
+.star-button {
+  background-color: #ffc107;
+}
+
+.star-button.unstarred {
+  background-color: #6c757d;
+}
+
+.star-button:hover {
+  opacity: 0.9;
+}
+
+/* If you have a back navigation link or button */
+.back-link {
+  display: inline-block;
+  margin-bottom: 20px;
+  color: #007bff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.back-link:hover {
+  color: #0056b3;
+}
+@media (max-width: 1024px) {
+  .detail-container {
+    max-width: 95%; /* Allow more flexibility for tablets and smaller devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+    padding: 15px; /* Slightly reduce padding for medium screens */
+  }
+
+  .detail-title,
+  .detail-meta,
+  .detail-text {
+    font-size: 16px; /* Adjust font sizes for better readability */
+  }
+
+  .detail-button,
+  .star-button {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Adjust font size for buttons */
+  }
+
+  .back-link {
+    margin-bottom: 15px; /* Adjust spacing */
+  }
+}
+
+@media (max-width: 600px) {
+  .detail-container {
+    padding: 10px; /* Reduce padding further for small screens */
+  }
+
+  .detail-title,
+  .detail-meta,
+  .detail-text {
+    font-size: 14px; /* Reduce font size further for small screens */
+  }
+
+  .detail-button,
+  .star-button {
+    padding: 6px 12px; /* Further adjust button padding for better usability */
+  }
+}

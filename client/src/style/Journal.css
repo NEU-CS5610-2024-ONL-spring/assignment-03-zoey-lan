@@ -1,0 +1,120 @@
+/* Journals.css */
+
+/* Container for the journal creation form */
+.journal-form {
+  margin-bottom: 20px;
+}
+
+.journal-form input,
+.journal-form textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 300px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+/* CSS for wider browser support */
+textarea::placeholder {
+  font-size: 16px; /* Example size */
+  color: grey;
+}
+
+/* For WebKit browsers */
+textarea::-webkit-input-placeholder {
+  font-size: 16px;
+  color: grey;
+}
+
+/* For Firefox 19+ */
+textarea::-moz-placeholder {
+  font-size: 16px;
+  color: grey;
+}
+
+/* For Internet Explorer 10+ */
+textarea:-ms-input-placeholder {
+  font-size: 16px;
+  color: grey;
+}
+
+.journal-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.journal-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for each journal item */
+.journal-item {
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+.journal-item:last-child {
+  border-bottom: none;
+}
+
+.journal-item p {
+  margin: 5px 0;
+}
+
+.journal-item button {
+  background-color: #28a745;
+  color: white;
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.journal-item button:hover {
+  background-color: #218838;
+}
+
+/* Button styles for starred/unstarred */
+.star-button {
+  background-color: #ffc107;
+}
+
+.star-button.unstarred {
+  background-color: #6c757d;
+}
+
+.star-button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .journal-form input,
+  .journal-form textarea {
+    width: 80%; /* Make input fields and textareas take up 80% of the container width */
+    font-size: 14px; /* Adjust font size for better readability on smaller screens */
+  }
+
+  .journal-form button,
+  .journal-item button {
+    padding: 8px 16px; /* Adjust button padding */
+    font-size: 14px; /* Adjust button font size */
+  }
+}
+
+@media (max-width: 600px) {
+  .journal-form input,
+  .journal-form textarea {
+    width: 95%; /* Increase width for very small screens */
+  }
+
+  .journal-form button,
+  .journal-item button {
+    padding: 6px 12px; /* Further adjust button padding for small screens */
+  }
+}
