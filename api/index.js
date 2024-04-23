@@ -287,7 +287,7 @@ app.get("/users/profile", requireAuth, async (req, res) => {
     res.status(404).send("User not found.");
   }
 });
-
-app.listen(8000, () => {
+const PORT = parseInt(process.env.PORT) || 8080;
+app.listen(PORT, () => {
   console.log("Server running on http://localhost:8000 🎉 🚀");
 });
